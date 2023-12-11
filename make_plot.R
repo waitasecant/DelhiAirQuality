@@ -2,6 +2,13 @@ library(plotly)
 library(processx)
 library(reticulate)
 
+
+install.packages('reticulate')
+reticulate::install_miniconda()
+reticulate::conda_install('r-reticulate', 'python-kaleido')
+reticulate::conda_install('r-reticulate', 'plotly', channel = 'plotly')
+reticulate::use_miniconda('r-reticulate')
+
 df24 = read.csv("https://raw.githubusercontent.com/waitasecant/Delhi-Air-Pollution-Dashboard/main/myApp/data/realTimeDelhi.csv")
 df24$Date =as.POSIXct(df24$Date, format = "%Y-%m-%d %H:%M:%S")
 

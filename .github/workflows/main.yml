@@ -29,6 +29,7 @@ jobs:
         packages: |
           any::plotly 
           any::processx
+          any::reticulate
 
     - name: Make plots
       run: Rscript -e 'source("make_plot.R")'

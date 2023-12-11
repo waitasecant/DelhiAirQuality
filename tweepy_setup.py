@@ -47,10 +47,12 @@ client = tweepy.Client(
     access_token_secret=os.getenv("access_token_secret"),
 )
 
+sites = ["Alipur"]
+
 for j in sites:
     media_ids = []
+    params = []
     for i in ["PM2.5", "PM10", "NH3", "SO2"]:
-        params = []
         if os.path.exists(f"{i}\\{j}.png"):
             media = api.media_upload(filename=f"{i}\\{j}.png").media_id_string
             media_ids.append(media)

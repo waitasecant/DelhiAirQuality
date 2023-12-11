@@ -50,8 +50,11 @@ client = tweepy.Client(
 for j in sites:
     media_ids = []
     for i in ["PM2.5", "PM10", "NH3", "SO2"]:
+        params = []
         if os.path.exists(f"{i}\\{j}.png"):
             media = api.media_upload(filename=f"{i}\\{j}.png").media_id_string
             media_ids.append(media)
-    text = f"Last 24-hr PM2.5, PM10, NH3, SO2 concentration at {j}, Delhi"
+            params.append(i)
+
+    text = f"Last 24-hr {', '.join(params)} concentration at {j}, Delhi"
     client.create_tweet(text=text, media_ids=media_ids)

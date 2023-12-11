@@ -1,7 +1,7 @@
 name: build
 on:
   schedule:
-    - cron:  '0-59/15 * * * *'
+    - cron:  '30 * * * *'
 
 jobs:
   make-plots-tweet:
@@ -55,7 +55,7 @@ jobs:
         git config --local user.email "actions@github.com"
         git config --local user.name "GitHub Actions"
         git add -A
-        git diff-index --quiet HEAD || (git commit -a -m "Plots Created" --allow-empty)
+        git diff-index --quiet HEAD || (git commit -a -m "Plots Tweeted" --allow-empty)
 
     - name: push changes
       uses: ad-m/github-push-action@v0.6.0

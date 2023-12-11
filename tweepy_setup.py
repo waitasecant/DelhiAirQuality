@@ -33,7 +33,7 @@ sites = [
 
 load_dotenv()
 
-auth = tweepy.OAuthHandler(
+auth = tweepy.OAuth1UserHandler(
     consumer_key=os.getenv("api_key"), consumer_secret=os.getenv("api_secret")
 )
 
@@ -46,8 +46,6 @@ client = tweepy.Client(
     access_token=os.getenv("access_token"),
     access_token_secret=os.getenv("access_token_secret"),
 )
-
-sites = ["Alipur"]
 
 for j in sites:
     media_ids = []

@@ -1,5 +1,7 @@
 library(plotly)
 library(processx)
+library(reticulate)
+
 df24 = read.csv("https://raw.githubusercontent.com/waitasecant/Delhi-Air-Pollution-Dashboard/main/myApp/data/realTimeDelhi.csv")
 df24$Date =as.POSIXct(df24$Date, format = "%Y-%m-%d %H:%M:%S")
 

@@ -6,6 +6,13 @@ on:
 jobs:
   make-plots-tweet:
     runs-on: ubuntu-latest
+
+    env:
+      API_KEY: ${{ secrets.API_KEY }}
+      API_SECRET: ${{ secrets.API_SECRET }}
+      ACCESS_TOKEN: ${{ secrets.ACCESS_TOKEN }}
+      ACCESS_TOKEN_SECRET: ${{ secrets.ACCESS_TOKEN_SECRET }}
+
     steps:
     - name: checkout repo content
       uses: actions/checkout@v4

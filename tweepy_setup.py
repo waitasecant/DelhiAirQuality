@@ -34,17 +34,17 @@ sites = [
 load_dotenv()
 
 auth = tweepy.OAuth1UserHandler(
-    consumer_key=os.getenv("api_key"), consumer_secret=os.getenv("api_secret")
+    consumer_key=os.getenv("API_KEY"), consumer_secret=os.getenv("API_SECRET")
 )
 
-auth.set_access_token(os.getenv("access_token"), os.getenv("access_token_secret"))
+auth.set_access_token(os.getenv("ACCESS_TOKEN"), os.getenv("ACCESS_TOKEN_SECRET"))
 api = tweepy.API(auth, wait_on_rate_limit=True)
 
 client = tweepy.Client(
-    consumer_key=os.getenv("api_key"),
-    consumer_secret=os.getenv("api_secret"),
-    access_token=os.getenv("access_token"),
-    access_token_secret=os.getenv("access_token_secret"),
+    consumer_key=os.getenv("API_KEY"),
+    consumer_secret=os.getenv("API_SECRET"),
+    access_token=os.getenv("ACCESS_TOKEN"),
+    access_token_secret=os.getenv("ACCESS_TOKEN_SECRET"),
 )
 
 for j in sites:

@@ -1,6 +1,5 @@
 import tweepy
 import os
-
 from dotenv import load_dotenv
 
 sites = [
@@ -27,9 +26,8 @@ sites = [
     "Anand Vihar",
     "Mandir Marg",
     "Punjabi Bagh",
-    "R K Puram",
+    "R K Puram"
 ]
-
 
 load_dotenv()
 
@@ -44,15 +42,15 @@ client = tweepy.Client(
     consumer_key=os.getenv("API_KEY"),
     consumer_secret=os.getenv("API_SECRET"),
     access_token=os.getenv("ACCESS_TOKEN"),
-    access_token_secret=os.getenv("ACCESS_TOKEN_SECRET"),
+    access_token_secret=os.getenv("ACCESS_TOKEN_SECRET")
 )
 
 for j in sites:
     media_ids = []
     params = []
     for i in ["PM2.5", "PM10", "NH3", "SO2"]:
-        if os.path.exists(f"{i}\\{j}.png"):
-            media = api.media_upload(filename=f"{i}\\{j}.png").media_id_string
+        if os.path.exists(f"{i}//{j}.png"):
+            media = api.media_upload(filename=f"{i}//{j}.png").media_id_string
             media_ids.append(media)
             params.append(i)
 

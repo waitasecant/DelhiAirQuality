@@ -178,7 +178,7 @@ for (j in names(emptyCol)){
 }
 
 layout(fig, automargin=TRUE, yaxis = list(rangemode = "tozero"))
-save_image(p = fig, file = paste(par, "/", st, ".png", sep=""), width=1500, height=750)
+save_image(p = fig, file = paste("data", par, "/", st, ".png", sep=""), width=1500, height=750)
 }
 }
 }

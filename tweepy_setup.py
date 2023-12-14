@@ -33,7 +33,7 @@ sites = [
 
 load_dotenv()
 
-auth = tweepy.OAuth1UserHandler(
+auth = tweepy.OAuthHandler(
     consumer_key=os.getenv("API_KEY"), consumer_secret=os.getenv("API_SECRET")
 )
 

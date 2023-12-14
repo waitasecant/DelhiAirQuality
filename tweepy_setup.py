@@ -1,6 +1,7 @@
 import tweepy
 import os
 from dotenv import load_dotenv
+from datetime import datetime
 
 sites = [
     "Bawana",
@@ -54,5 +55,5 @@ for j in sites:
             media_ids.append(media)
             params.append(i)
 
-    text = f"Last 24-hr {', '.join(params)} concentration at {j}, Delhi"
+    text = f"Last 24-hr {', '.join(params)} concentration at {j}, Delhi\n {datetime.strftime(datetime.today(), "%d %B %Y, %H:%M")} \n Color-Coded according to NAAQS https://t.ly/UIKC5"
     client.create_tweet(text=text, media_ids=media_ids)

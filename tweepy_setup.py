@@ -50,7 +50,7 @@ for j in sites:
     media_ids = []
     params = []
     for i in ["PM2.5", "PM10", "NH3", "SO2"]:
-        if os.path.exists(f"{i}//{j}.png"):
+        if os.path.exists(f"data//{i}//{j}.png"):
             media = api.media_upload(filename=f"data//{i}//{j}.png").media_id_string
             media_ids.append(media)
             params.append(i)

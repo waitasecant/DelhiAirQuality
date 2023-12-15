@@ -1,5 +1,6 @@
 import tweepy
 import os
+import pytz
 from dotenv import load_dotenv
 from datetime import datetime
 
@@ -29,7 +30,7 @@ sites = [
     "Punjabi Bagh",
     "R K Puram"
 ]
-
+IST = pytz.timezone('Asia/Kolkata')
 load_dotenv()
 
 auth = tweepy.OAuthHandler(
@@ -55,5 +56,5 @@ for j in sites:
             media_ids.append(media)
             params.append(i)
 
-    text = f"Last 24-hr {', '.join(params)} concentration at {j}, Delhi\n{datetime.strftime(datetime.today(), '%d %B %Y, %H:%M')}\nColor-Coded according to NAAQS https://t.ly/UIKC5"
+    text = f"Last 24-hr {', '.join(params)} concentration at {j}, Delhi\n{datetime.strftime(datetime.today(IST), '%d %B %Y, %H:%M')}\nColor-Coded according to NAAQS https://t.ly/UIKC5"
     client.create_tweet(text=text, media_ids=media_ids)

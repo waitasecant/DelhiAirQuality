@@ -1,7 +1,7 @@
 name: build
 on:
   schedule:
-    - cron:  '0 2,14 * * *'
+    - cron:  '0 3,15 * * *'
 
 jobs:
   make-plots-tweet:

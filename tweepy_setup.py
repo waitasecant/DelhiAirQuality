@@ -55,6 +55,8 @@ for j in sites:
             media = api.media_upload(filename=f"data//{i}//{j}.png").media_id_string
             media_ids.append(media)
             params.append(i)
-
-    text = f"Last 24-hr {', '.join(params)} concentration at {j}, Delhi\n{datetime.strftime(datetime.now(IST), '%d %B %Y, %H:%M')}\nColor-Coded according to NAAQS https://t.ly/UIKC5"
+    st ="#"+"".join(j.split(" "))
+    st = st.replace(".", "")
+    st = st.replace("-", "")
+    text = f"Last 24-hr {', '.join(params)} concentration at {j}, Delhi\n{datetime.strftime(datetime.now(IST), '%d %B %Y, %H:%M')}\nColor-Coded according to NAAQS https://t.ly/UIKC5\n{st}"
     client.create_tweet(text=text, media_ids=media_ids)

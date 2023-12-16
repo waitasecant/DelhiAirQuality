@@ -9,7 +9,7 @@ reticulate::conda_install('r-reticulate', 'python-kaleido')
 reticulate::conda_install('r-reticulate', 'plotly', channel = 'plotly')
 reticulate::use_miniconda('r-reticulate')
 
-df24 = read.csv("https://raw.githubusercontent.com/waitasecant/Delhi-Air-Pollution-Dashboard/main/myApp/data/realTimeDelhi.csv")
+df24 = read.csv("https://raw.githubusercontent.com/waitasecant/Air-Pollution-Dashboard/main/myApp/data/realTimeDelhi.csv")
 df24$Date =as.POSIXct(df24$Date, format = "%Y-%m-%d %H:%M:%S")
 
 col = list("darkredp"=rgb(0.78, 0.063, 0.063), "redp"=rgb(1, 0.165, 0), "orangep"=rgb(1, 0.702, 0),

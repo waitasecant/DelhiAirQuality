@@ -6,5 +6,7 @@
 
 *Automated updates on air pollutants in Delhi*
 
+![alt text](https://github.com/waitasecant/DelhiAirQuality/blob/main/twitter.png?raw=true)
+
 An automated twitter bot tweeting last 24-hr trends for four pollutant parameter $\text{PM}\_{2.5},\ \text{PM}\_{10},\ \text{SO}\_{2}\ \text{and}\ \text{NH}\_{3}$ for 24 ambient air quality stations in Delhi. This bot is built over-the-top of a shiny dashboard displaying color-coded time-series plots of real-time air quality data available [*here*](https://waitasecant.shinyapps.io/myapp/)
 

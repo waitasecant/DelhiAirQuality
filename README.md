@@ -1,2 +1,10 @@
 # DelhiAirQuality
 [![build](https://github.com/waitasecant/DelhiAirQuality/actions/workflows/main.yml/badge.svg)](https://github.com/waitasecant/DelhiAirQuality/actions/workflows/main.yml)
+![GitHub License](https://img.shields.io/github/license/waitasecant/DelhiAirQuality)
+![Website](https://img.shields.io/website?url=https%3A%2F%2Fwaitasecant.shinyapps.io%2Fmyapp&up_message=dashboard&label=shiny&link=https%3A%2F%2Fwaitasecant.shinyapps.io%2Fmyapp)
+![X (formerly Twitter) Follow](https://img.shields.io/twitter/follow/delhiAirQuality?label=Follow%20%40delhiAirQuality)
+
+*Automated updates on air pollutants in Delhi*
+
+An automated twitter bot tweeting last 24-hr trends for four pollutant parameter $\text{PM}\_{2.5},\ \text{PM}\_{10},\ \text{SO}\_{2}\ \text{and}\ \text{NH}\_{3}$ for 24 ambient air quality stations in Delhi. This bot is built over-the-top of a shiny dashboard displaying color-coded time-series plots of real-time air quality data available [*here*](https://waitasecant.shinyapps.io/myapp/)
+

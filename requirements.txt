@@ -1,0 +1,5 @@
+tweepy
+python-dotenv
+kaleido
+datetime
+pytz
